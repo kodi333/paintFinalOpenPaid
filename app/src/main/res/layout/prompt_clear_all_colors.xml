@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog">
+
+    <ImageButton
+        android:id="@+id/ok_button"
+        style="@style/yesNoButton"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/ok_button"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ok" />
+
+    <ImageButton
+        android:id="@+id/no_button"
+        style="@style/yesNoButton"
+        android:layout_width="50dp"
+        android:layout_below="@+id/text"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@id/ok_button"
+        android:contentDescription="@string/no_button"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/no" />
+
+    <ImageView
+        android:id="@+id/cat_blank"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/text"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/cat_blank"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/cat_blank" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Erase_all_colors_txt"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+</RelativeLayout>
