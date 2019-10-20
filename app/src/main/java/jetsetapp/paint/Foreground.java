@@ -51,16 +51,7 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
     private List<Listener> listeners = new CopyOnWriteArrayList<Listener>();
     private Runnable check;
 
-    /**
-     * Its not strictly necessary to use this method - _usually_ invoking
-     * get with a Context gives us a path to retrieve the Application and
-     * initialise, but sometimes (e.g. in test harness) the ApplicationContext
-     * is != the Application, and the docs make no guarantees.
-     *
-     * @param application
-     * @return an initialised Foreground instance
-     */
-    public static Foreground init(Application application) {
+    private static Foreground init(Application application) {
         if (instance == null) {
             instance = new Foreground();
             application.registerActivityLifecycleCallbacks(instance);
@@ -68,14 +59,14 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
         return instance;
     }
 
-    public static Foreground get(Application application) {
+    static Foreground get(Application application) {
         if (instance == null) {
             init(application);
         }
         return instance;
     }
 
-    public static Foreground get(Context ctx) {
+    static Foreground get(Context ctx) {
         Context appCtx = null;
         if (instance == null) {
             appCtx = ctx.getApplicationContext();
@@ -103,11 +94,11 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
         return !foreground;
     }
 
-    public void addListener(Listener listener) {
+    void addListener(Listener listener) {
         listeners.add(listener);
     }
 
-    public void removeListener(Listener listener) {
+    void removeListener(Listener listener) {
         listeners.remove(listener);
     }
 

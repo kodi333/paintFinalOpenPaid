@@ -246,44 +246,41 @@ public class CanvasView extends AppCompatImageView {
         ImageButton no_button = promptView.findViewById(R.id.no_button);
 
 
-        ok_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                path.reset();
-                paths.clear();
-                undonePaths.clear();
-                sourceFillColors.clear();
-                undoneFillColors.clear();
-                points.clear();
-                undonePoints.clear();
-                colors.clear();
-                undoneColors.clear();
-                strokes.clear();
-                undoneStrokes.clear();
-                targetFillColors.clear();
-                undoneTargetFillColors.clear();
+        ok_button.setOnClickListener(v -> {
+            path.reset();
+            paths.clear();
+            undonePaths.clear();
+            sourceFillColors.clear();
+            undoneFillColors.clear();
+            points.clear();
+            undonePoints.clear();
+            colors.clear();
+            undoneColors.clear();
+            strokes.clear();
+            undoneStrokes.clear();
+            targetFillColors.clear();
+            undoneTargetFillColors.clear();
 
-                if (imageRect == null) {
-                    imageRect = new Rect(0, 0, getWidth(), getHeight());
-                }
-
-                newBitmap = MainActivity.getNewBitmap();
-                if (newBitmap != null) canvas.drawBitmap(newBitmap, null, imageRect, paint);
-                path = new Path();
-
-
-                if (points.size() <= 0) {
-                    MainActivity.undoButton.setVisibility(View.INVISIBLE);
-                    MainActivity.clearButton.setVisibility(View.INVISIBLE);
-                }
-
-                if (undonePoints.size() <= 0) {
-                    MainActivity.redoButton.setVisibility(View.INVISIBLE);
-                }
-                invalidate();
-                ad.dismiss();
-
+            if (imageRect == null) {
+                imageRect = new Rect(0, 0, getWidth(), getHeight());
             }
+
+            newBitmap = MainActivity.getNewBitmap();
+            if (newBitmap != null) canvas.drawBitmap(newBitmap, null, imageRect, paint);
+            path = new Path();
+
+
+            if (points.size() <= 0) {
+                MainActivity.undoButton.setVisibility(View.INVISIBLE);
+                MainActivity.clearButton.setVisibility(View.INVISIBLE);
+            }
+
+            if (undonePoints.size() <= 0) {
+                MainActivity.redoButton.setVisibility(View.INVISIBLE);
+            }
+            invalidate();
+            ad.dismiss();
+
         });
 
         no_button.setOnClickListener(new View.OnClickListener() {

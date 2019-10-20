@@ -9,11 +9,11 @@ public class SpinnerItem {
         mFlagImage = flagImage;
     }
 
-    public String getIconName() {
+    String getIconName() {
         return mCountryName;
     }
 
-    public int getIconImage() {
+    int getIconImage() {
         return mFlagImage;
     }
 }

@@ -35,7 +35,7 @@ public class FloodFill {
         copyImage(img);
     }
 
-    public FloodFill(Bitmap img, int targetColor, int newColor) {
+    FloodFill(Bitmap img, int targetColor, int newColor) {
         useImage(img);
         String[] listColors = new String[]{"#E6B0AA", "#FFEA00", "#40AFFF", "#FF4043",
                 "#FF00FF", "#99FF40", "#800000", "#001A00", "#FFFFFF", "#C0C0C0", "#FFBFBF",
@@ -125,13 +125,13 @@ public class FloodFill {
     private void prepare() {
         // Called before starting flood-fill
         pixelsChecked = new boolean[pixels.length];
-        ranges = new LinkedList<FloodFillRange>();
+        ranges = new LinkedList<>();
     }
 
     // Fills the specified point on the bitmap with the currently selected fill
     // color.
     // int x, int y: The starting coords for the fill
-    public void floodFill(int x, int y) {
+    void floodFill(int x, int y) {
         if (!skipFill) {
             // Setup
             prepare();
@@ -197,7 +197,7 @@ public class FloodFill {
         int lFillLoc = x; // the location to check/fill on the left
         int pxIdx = (width * y) + x;
 
-        while (true) {
+        do {
             // **fill with the color
             pixels[pxIdx] = fillColor;
 
@@ -209,10 +209,7 @@ public class FloodFill {
             pxIdx--; // de-increment pixel index
 
             // **exit loop if we're at edge of bitmap or color area
-            if (lFillLoc < 0 || (pixelsChecked[pxIdx]) || !CheckPixel(pxIdx)) {
-                break;
-            }
-        }
+        } while (lFillLoc >= 0 && (!pixelsChecked[pxIdx]) && CheckPixel(pxIdx));
 
         lFillLoc++;
 
@@ -221,7 +218,7 @@ public class FloodFill {
 
         pxIdx = (width * y) + x;
 
-        while (true) {
+        do {
             // **fill with the color
             pixels[pxIdx] = fillColor;
 
@@ -233,10 +230,7 @@ public class FloodFill {
             pxIdx++; // increment pixel index
 
             // **exit loop if we're at edge of bitmap or color area
-            if (rFillLoc >= width || pixelsChecked[pxIdx] || !CheckPixel(pxIdx)) {
-                break;
-            }
-        }
+        } while (rFillLoc < width && !pixelsChecked[pxIdx] && CheckPixel(pxIdx));
 
         rFillLoc--;
 

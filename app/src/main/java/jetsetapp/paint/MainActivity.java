@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     saveFileToInternalStorage(v);
                     break;
                 case R.id.floodFill:
-                    setFocus(btn_unfocus, (ImageButton) findViewById(v.getId()));
+                    setFocus(btn_unfocus, findViewById(v.getId()));
                     fillFloodSelected = true;
                     canvasView.changeStroke(0);
                     break;
@@ -297,13 +297,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
                     });
-                    no_button.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog_erase.dismiss();
-
-                        }
-                    });
+                    no_button.setOnClickListener(v1 -> dialog_erase.dismiss());
                     dialog_erase.show();
                     break;
 
@@ -312,18 +306,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             classMap.get(currentLayout));
                     MainActivity.this.startActivity(intentApp);
                     MainActivity.setCurrentLayout(currentLayout);
-                    setFocus(btn_unfocus, (ImageButton) findViewById(v.getId()));
+                    setFocus(btn_unfocus, findViewById(v.getId()));
                     fillFloodSelected = true;
                     saveFileToInternalStorage(v);
                     break;
 
                 case R.id.save:
-                    setFocus(btn_unfocus, (ImageButton) findViewById(v.getId()));
+                    setFocus(btn_unfocus, findViewById(v.getId()));
                     saveFile(v);
                     break;
 
                 case R.id.floodFill:
-                    setFocus(btn_unfocus, (ImageButton) findViewById(v.getId()));
+                    setFocus(btn_unfocus, findViewById(v.getId()));
                     fillFloodSelected = true;
                     canvasView.changeStroke(0);
                     break;

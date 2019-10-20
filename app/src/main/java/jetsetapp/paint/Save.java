@@ -22,14 +22,17 @@ public class Save {
 
     private static String NameOfOverwrittenFile = "Overwritten";
     private static String NameOfFolder = "/KidsPaint";
-    private static String NameOfFile = "KidsPaint";
-    private static String file_path = "/data/user/0/jetsetapp.paint/app_imageDir";
+    private static String file_path;
 
-    public static String getFile_path() {
+    static {
+        file_path = "/data/user/0/jetsetapp.paint/app_imageDir";
+    }
+
+    static String getFile_path() {
         return file_path;
     }
 
-    public static String getNameOfOverwrittenFile() {
+    static String getNameOfOverwrittenFile() {
         return NameOfOverwrittenFile;
     }
 
@@ -54,7 +57,7 @@ public class Save {
                 show();
     }
 
-    public void SaveImage(Context context, Bitmap ImageToSave) {
+    void SaveImage(Context context, Bitmap ImageToSave) {
         TheThis = context;
 
         String currentDateAndTime = getCurrentDateAndTime();
@@ -63,7 +66,8 @@ public class Save {
         if (!dir.exists()) {
             dir.mkdir();
         }
-        File file = new File(dir, NameOfFile + currentDateAndTime + ".png");
+        String nameOfFile = "KidsPaint";
+        File file = new File(dir, nameOfFile + currentDateAndTime + ".png");
         try {
             FileOutputStream fOut = new FileOutputStream(file);
             ImageToSave.compress(Bitmap.CompressFormat.PNG, 100, fOut);
@@ -79,7 +83,7 @@ public class Save {
         }
     }
 
-    public void writeFileOnInternalStorage(Context mcoContext, Bitmap ImageToSave, String FileName) {
+    void writeFileOnInternalStorage(Context mcoContext, Bitmap ImageToSave, String FileName) {
         Log.i("filename", FileName);
         //scale image first , otherwise FloodFill not work
         Bitmap ImageToSave2 = Bitmap.createScaledBitmap(ImageToSave, MainActivity.getNewBitmap().getWidth(),

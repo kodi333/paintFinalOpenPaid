@@ -75,7 +75,7 @@
                         <TextView
                             android:id="@+id/uniSelectText"
                             style="@style/GalleryTextStyle"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:padding="2dp"
@@ -112,9 +112,9 @@
                             android:id="@+id/key"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni1"
+                            android:layout_alignStart="@id/uni1"
                             android:layout_alignTop="@id/uni1"
-                            android:layout_alignRight="@id/uni1"
+                            android:layout_alignEnd="@id/uni1"
                             android:layout_alignBottom="@id/uni1"
                             android:background="@null"
                             android:scaleType="center"
@@ -141,9 +141,9 @@
                             android:id="@+id/key2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni2"
+                            android:layout_alignStart="@id/uni2"
                             android:layout_alignTop="@id/uni2"
-                            android:layout_alignRight="@id/uni2"
+                            android:layout_alignEnd="@id/uni2"
                             android:layout_alignBottom="@id/uni2"
                             android:background="@null"
                             android:scaleType="center"
@@ -176,9 +176,9 @@
                             android:id="@+id/key3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni3"
+                            android:layout_alignStart="@id/uni3"
                             android:layout_alignTop="@id/uni3"
-                            android:layout_alignRight="@id/uni3"
+                            android:layout_alignEnd="@id/uni3"
                             android:layout_alignBottom="@id/uni3"
                             android:background="@null"
                             android:scaleType="center"
@@ -205,9 +205,9 @@
                             android:id="@+id/key4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni4"
+                            android:layout_alignStart="@id/uni4"
                             android:layout_alignTop="@id/uni4"
-                            android:layout_alignRight="@id/uni4"
+                            android:layout_alignEnd="@id/uni4"
                             android:layout_alignBottom="@id/uni4"
                             android:background="@null"
                             android:scaleType="center"
@@ -240,9 +240,9 @@
                             android:id="@+id/key5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni5"
+                            android:layout_alignStart="@id/uni5"
                             android:layout_alignTop="@id/uni5"
-                            android:layout_alignRight="@id/uni5"
+                            android:layout_alignEnd="@id/uni5"
                             android:layout_alignBottom="@id/uni5"
                             android:background="@null"
                             android:scaleType="center"
@@ -269,9 +269,9 @@
                             android:id="@+id/key6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni6"
+                            android:layout_alignStart="@id/uni6"
                             android:layout_alignTop="@id/uni6"
-                            android:layout_alignRight="@id/uni6"
+                            android:layout_alignEnd="@id/uni6"
                             android:layout_alignBottom="@id/uni6"
                             android:background="@null"
                             android:scaleType="center"
@@ -285,7 +285,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -304,9 +304,9 @@
                             android:id="@+id/key7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni7"
+                            android:layout_alignStart="@id/uni7"
                             android:layout_alignTop="@id/uni7"
-                            android:layout_alignRight="@id/uni7"
+                            android:layout_alignEnd="@id/uni7"
                             android:layout_alignBottom="@id/uni7"
                             android:background="@null"
                             android:scaleType="center"
@@ -314,7 +314,7 @@
 
                     </RelativeLayout>
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -333,9 +333,9 @@
                             android:id="@+id/key8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni8"
+                            android:layout_alignStart="@id/uni8"
                             android:layout_alignTop="@id/uni8"
-                            android:layout_alignRight="@id/uni8"
+                            android:layout_alignEnd="@id/uni8"
                             android:layout_alignBottom="@id/uni8"
                             android:background="@null"
                             android:scaleType="center"
@@ -349,7 +349,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -368,9 +368,9 @@
                             android:id="@+id/key9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni9"
+                            android:layout_alignStart="@id/uni9"
                             android:layout_alignTop="@id/uni9"
-                            android:layout_alignRight="@id/uni9"
+                            android:layout_alignEnd="@id/uni9"
                             android:layout_alignBottom="@id/uni9"
                             android:background="@null"
                             android:scaleType="center"
@@ -378,7 +378,7 @@
 
                     </RelativeLayout>
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -397,9 +397,9 @@
                             android:id="@+id/key10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni10"
+                            android:layout_alignStart="@id/uni10"
                             android:layout_alignTop="@id/uni10"
-                            android:layout_alignRight="@id/uni10"
+                            android:layout_alignEnd="@id/uni10"
                             android:layout_alignBottom="@id/uni10"
                             android:background="@null"
                             android:scaleType="center"
@@ -413,7 +413,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -432,9 +432,9 @@
                             android:id="@+id/key11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni11"
+                            android:layout_alignStart="@id/uni11"
                             android:layout_alignTop="@id/uni11"
-                            android:layout_alignRight="@id/uni11"
+                            android:layout_alignEnd="@id/uni11"
                             android:layout_alignBottom="@id/uni11"
                             android:background="@null"
                             android:scaleType="center"
@@ -443,7 +443,7 @@
                     </RelativeLayout>
 
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -462,9 +462,9 @@
                             android:id="@+id/key12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/uni12"
+                            android:layout_alignStart="@id/uni12"
                             android:layout_alignTop="@id/uni12"
-                            android:layout_alignRight="@id/uni12"
+                            android:layout_alignEnd="@id/uni12"
                             android:layout_alignBottom="@id/uni12"
                             android:background="@null"
                             android:scaleType="center"

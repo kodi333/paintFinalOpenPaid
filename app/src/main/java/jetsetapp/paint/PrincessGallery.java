@@ -24,8 +24,6 @@ public class PrincessGallery extends AppCompatActivity implements View.OnClickLi
     ImageView dogs;
     ImageView cats;
     ImageView unicorn;
-    private static String orgImageName = null;
-    private Intent mainActivity;
     private ImageButton playMusicOtherGalleryButton;
 
     public static boolean isPictureChosen() {
@@ -51,7 +49,7 @@ public class PrincessGallery extends AppCompatActivity implements View.OnClickLi
         for (int i = 1; i <= 12; i++) {
 
             String overwrittenImageName = Save.getNameOfOverwrittenFile() + "princess" + i;
-            orgImageName = "princess" + i;
+            String orgImageName = "princess" + i;
 
             Log.i("orgImageName", "orgImageName " + orgImageName);
             Log.i("overwrittenImageName", "overwrittenImageName " + overwrittenImageName);
@@ -137,7 +135,7 @@ public class PrincessGallery extends AppCompatActivity implements View.OnClickLi
         String buttonId = String.valueOf(x.getTag());
 //        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + Save.getNameOfFolder();
 
-        mainActivity = new Intent(PrincessGallery.this, MainActivity.class);
+        Intent mainActivity = new Intent(PrincessGallery.this, MainActivity.class);
 //        jesli istnieje OverwrittenKidsPaint + buttonid wtedy putExtra("picture", "Overwritten" + buttoin
         File file = new File(Save.getFile_path(), Save.getNameOfOverwrittenFile() + buttonId + ".png");
 

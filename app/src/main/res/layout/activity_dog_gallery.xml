@@ -42,7 +42,7 @@
                             android:layout_width="40dp"
                             android:layout_height="45dp"
                             android:layout_margin="2dp"
-                            android:layout_marginRight="7dp"
+                            android:layout_marginEnd="7dp"
                             android:background="@drawable/music"
                             android:padding="2dp"
                             android:contentDescription="@string/play_music"
@@ -52,7 +52,7 @@
                         <TextView
                             android:id="@+id/dogSelectText"
                             style="@style/GalleryTextStyle"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:padding="2dp"
@@ -73,8 +73,6 @@
                     <ImageView
                         android:id="@+id/dog1"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog1"
                         android:scaleType="fitCenter"
@@ -83,8 +81,6 @@
                     <ImageView
                         android:id="@+id/dog3"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog3"
                         android:scaleType="fitCenter"
@@ -98,8 +94,6 @@
                     <ImageView
                         android:id="@+id/dog4"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog4"
                         android:scaleType="fitCenter"
@@ -108,8 +102,6 @@
                     <ImageView
                         android:id="@+id/dog5"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog5"
                         android:scaleType="fitCenter"
@@ -123,8 +115,6 @@
                     <ImageView
                         android:id="@+id/dog6"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog6"
                         android:scaleType="fitCenter"
@@ -133,8 +123,6 @@
                     <ImageView
                         android:id="@+id/dog7"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog7"
                         android:scaleType="fitCenter"
@@ -149,8 +137,6 @@
                     <ImageView
                         android:id="@+id/dog8"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog8"
                         android:scaleType="fitCenter"
@@ -159,8 +145,6 @@
                     <ImageView
                         android:id="@+id/dog9"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog9"
                         android:scaleType="fitCenter"
@@ -174,8 +158,6 @@
                     <ImageView
                         android:id="@+id/dog10"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog10"
                         android:scaleType="fitCenter"
@@ -184,8 +166,6 @@
                     <ImageView
                         android:id="@+id/dog11"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog11"
                         android:scaleType="fitCenter"
@@ -199,8 +179,6 @@
                     <ImageView
                         android:id="@+id/dog12"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog12"
                         android:scaleType="fitCenter"
@@ -209,8 +187,6 @@
                     <ImageView
                         android:id="@+id/dog13"
                         style="@style/galleryIcon"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
                         android:onClick="setBackground"
                         android:src="@drawable/dog13"
                         android:scaleType="fitCenter"
@@ -238,8 +214,6 @@
             layout="@layout/button_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
             android:clickable="true"
             android:focusable="true"
             android:orientation="horizontal" />
