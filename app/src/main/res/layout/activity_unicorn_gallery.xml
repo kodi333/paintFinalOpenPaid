@@ -106,6 +106,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni1"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni1" />
 
                         <ImageView
@@ -118,6 +119,7 @@
                             android:layout_alignBottom="@id/uni1"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -135,6 +137,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni2"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni2" />
 
                         <ImageView
@@ -147,6 +150,7 @@
                             android:layout_alignBottom="@id/uni2"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -170,6 +174,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni3"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni3" />
 
                         <ImageView
@@ -182,6 +187,7 @@
                             android:layout_alignBottom="@id/uni3"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -199,6 +205,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni4"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni4" />
 
                         <ImageView
@@ -211,6 +218,7 @@
                             android:layout_alignBottom="@id/uni4"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -234,6 +242,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni5"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni5" />
 
                         <ImageView
@@ -246,11 +255,12 @@
                             android:layout_alignBottom="@id/uni5"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
 
-                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
@@ -262,6 +272,7 @@
                             android:layout_alignParentTop="true"
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/uni6"
                             android:tag="uni6" />
 
@@ -274,6 +285,7 @@
                             android:layout_alignEnd="@id/uni6"
                             android:layout_alignBottom="@id/uni6"
                             android:background="@null"
+                            android:contentDescription="@string/unicorn_desc"
                             android:scaleType="center"
                             android:src="@drawable/key" />
 
@@ -298,6 +310,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni7"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni7" />
 
                         <ImageView
@@ -310,6 +323,7 @@
                             android:layout_alignBottom="@id/uni7"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -327,6 +341,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni8"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni8" />
 
                         <ImageView
@@ -339,6 +354,7 @@
                             android:layout_alignBottom="@id/uni8"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -362,6 +378,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni9"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni9" />
 
                         <ImageView
@@ -374,6 +391,7 @@
                             android:layout_alignBottom="@id/uni9"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -391,6 +409,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni10"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni10" />
 
                         <ImageView
@@ -403,6 +422,7 @@
                             android:layout_alignBottom="@id/uni10"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -426,6 +446,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni11"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni11" />
 
                         <ImageView
@@ -438,6 +459,7 @@
                             android:layout_alignBottom="@id/uni11"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>
@@ -456,6 +478,7 @@
                             android:onClick="gotoPaidApp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni12"
+                            android:contentDescription="@string/unicorn_desc"
                             android:tag="uni12" />
 
                         <ImageView
@@ -468,6 +491,7 @@
                             android:layout_alignBottom="@id/uni12"
                             android:background="@null"
                             android:scaleType="center"
+                            android:contentDescription="@string/unicorn_desc"
                             android:src="@drawable/key" />
 
                     </RelativeLayout>

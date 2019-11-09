@@ -10,6 +10,7 @@
     <string name="gallery_title">Select a picture</string>
     <string name="about_content"> Trala</string>
     <string name="play_music">Play music</string>
+    <string name="unicorn_desc">unicorn image</string>
     <string-array name="brushes">
         <item>small brush</item>
         <item>medium brush</item>
