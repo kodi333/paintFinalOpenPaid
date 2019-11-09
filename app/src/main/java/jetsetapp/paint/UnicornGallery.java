@@ -129,6 +129,27 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
 
     }
 
+    public void setBackground(View v) {
+        pictureChosen = true;
+        ImageView x = (ImageView) v;
+        String buttonId = String.valueOf(x.getTag());
+//        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + Save.getNameOfFolder();
+
+        Intent mainActivity = new Intent(UnicornGallery.this, MainActivity.class);
+//        jesli istnieje OverwrittenKidsPaint + buttonid wtedy putExtra("picture", "Overwritten" + buttoin
+        File file = new File(Save.getFile_path(), Save.getNameOfOverwrittenFile() + buttonId + ".png");
+
+        if (file.exists()) {
+            mainActivity.putExtra("picture", Save.getNameOfOverwrittenFile() + buttonId);
+            Log.i("Found", "File found : Overwritten" + buttonId);
+        } else {
+            mainActivity.putExtra("picture", buttonId);
+            Log.i("Found", "File not found : Overwritten" + buttonId);
+        }
+        startActivity(mainActivity);
+
+    }
+
 
     public void gotoPaidApp(View v) {
 

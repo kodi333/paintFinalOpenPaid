@@ -103,7 +103,7 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni1"
                             android:tag="uni1" />
