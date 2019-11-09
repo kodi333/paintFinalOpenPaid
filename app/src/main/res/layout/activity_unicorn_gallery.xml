@@ -108,17 +108,6 @@
                             android:src="@drawable/uni1"
                             android:tag="uni1" />
 
-                        <ImageView
-                            android:id="@+id/key"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni1"
-                            android:layout_alignTop="@id/uni1"
-                            android:layout_alignEnd="@id/uni1"
-                            android:layout_alignBottom="@id/uni1"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -132,22 +121,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni2"
                             android:tag="uni2" />
 
-                        <ImageView
-                            android:id="@+id/key2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni2"
-                            android:layout_alignTop="@id/uni2"
-                            android:layout_alignEnd="@id/uni2"
-                            android:layout_alignBottom="@id/uni2"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -167,22 +145,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni3"
                             android:tag="uni3" />
 
-                        <ImageView
-                            android:id="@+id/key3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni3"
-                            android:layout_alignTop="@id/uni3"
-                            android:layout_alignEnd="@id/uni3"
-                            android:layout_alignBottom="@id/uni3"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -196,22 +163,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni4"
                             android:tag="uni4" />
 
-                        <ImageView
-                            android:id="@+id/key4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni4"
-                            android:layout_alignTop="@id/uni4"
-                            android:layout_alignEnd="@id/uni4"
-                            android:layout_alignBottom="@id/uni4"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -231,22 +187,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni5"
                             android:tag="uni5" />
 
-                        <ImageView
-                            android:id="@+id/key5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni5"
-                            android:layout_alignTop="@id/uni5"
-                            android:layout_alignEnd="@id/uni5"
-                            android:layout_alignBottom="@id/uni5"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -260,22 +205,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni6"
                             android:tag="uni6" />
 
-                        <ImageView
-                            android:id="@+id/key6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni6"
-                            android:layout_alignTop="@id/uni6"
-                            android:layout_alignEnd="@id/uni6"
-                            android:layout_alignBottom="@id/uni6"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -295,22 +229,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni7"
                             android:tag="uni7" />
 
-                        <ImageView
-                            android:id="@+id/key7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni7"
-                            android:layout_alignTop="@id/uni7"
-                            android:layout_alignEnd="@id/uni7"
-                            android:layout_alignBottom="@id/uni7"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -324,22 +247,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni8"
                             android:tag="uni8" />
 
-                        <ImageView
-                            android:id="@+id/key8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni8"
-                            android:layout_alignTop="@id/uni8"
-                            android:layout_alignEnd="@id/uni8"
-                            android:layout_alignBottom="@id/uni8"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -359,22 +271,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni9"
                             android:tag="uni9" />
 
-                        <ImageView
-                            android:id="@+id/key9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni9"
-                            android:layout_alignTop="@id/uni9"
-                            android:layout_alignEnd="@id/uni9"
-                            android:layout_alignBottom="@id/uni9"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -388,22 +289,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni10"
                             android:tag="uni10" />
 
-                        <ImageView
-                            android:id="@+id/key10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni10"
-                            android:layout_alignTop="@id/uni10"
-                            android:layout_alignEnd="@id/uni10"
-                            android:layout_alignBottom="@id/uni10"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -423,22 +313,10 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni11"
                             android:tag="uni11" />
-
-                        <ImageView
-                            android:id="@+id/key11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni11"
-                            android:layout_alignTop="@id/uni11"
-                            android:layout_alignEnd="@id/uni11"
-                            android:layout_alignBottom="@id/uni11"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
@@ -453,22 +331,11 @@
                             style="@style/galleryIcon"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:onClick="gotoPaidApp"
+                            android:onClick="setBackground"
                             android:scaleType="fitCenter"
                             android:src="@drawable/uni12"
                             android:tag="uni12" />
 
-                        <ImageView
-                            android:id="@+id/key12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@id/uni12"
-                            android:layout_alignTop="@id/uni12"
-                            android:layout_alignEnd="@id/uni12"
-                            android:layout_alignBottom="@id/uni12"
-                            android:background="@null"
-                            android:scaleType="center"
-                            android:src="@drawable/key" />
 
                     </RelativeLayout>
 
