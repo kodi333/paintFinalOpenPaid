@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jetsetapp.paint">
+    package="jetsetappfull.paint">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_full"
-        android:label="@string/full_app_name"
+        android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="MainActivity"
+            android:name="jetsetappfull.paint.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait">
 
         </activity>
 
         <activity
-            android:name=".CatGallery"
+            android:name="jetsetappfull.paint.CatGallery"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
@@ -30,7 +35,7 @@
         </activity>
 
         <activity
-            android:name=".DogGallery"
+            android:name="jetsetappfull.paint.DogGallery"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
@@ -38,7 +43,7 @@
         </activity>
 
         <activity
-            android:name=".PrincessGallery"
+            android:name="jetsetappfull.paint.PrincessGallery"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
@@ -46,22 +51,16 @@
         </activity>
 
         <activity
-            android:name=".UnicornGallery"
+            android:name="jetsetappfull.paint.UnicornGallery"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
 
         </activity>
 
-        <service android:name=".MusicService"></service>
+        <service android:name="jetsetappfull.paint.MusicService" />
 
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-sdk android:targetSdkVersion="26" />
 
 </manifest>

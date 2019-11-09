@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

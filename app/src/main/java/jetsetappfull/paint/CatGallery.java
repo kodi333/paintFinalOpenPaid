@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.content.ComponentCallbacks2;
 import android.content.Context;
@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
-import static jetsetapp.paint.MusicManager.musicAlreadyPlayedAtBeginning;
+import static jetsetappfull.paint.MusicManager.musicAlreadyPlayedAtBeginning;
 
 public class CatGallery extends AppCompatActivity implements View.OnClickListener {
 

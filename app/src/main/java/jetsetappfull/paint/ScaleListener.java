@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.view.ScaleGestureDetector;
 import android.widget.ImageView;

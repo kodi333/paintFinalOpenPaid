@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.app.ActivityManager;
 import android.content.Context;

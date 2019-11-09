@@ -1,12 +1,10 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
-import android.content.ActivityNotFoundException;
 import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,13 +17,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 
-public class UnicornGallery extends AppCompatActivity implements View.OnClickListener {
+public class PrincessGallery extends AppCompatActivity implements View.OnClickListener {
 
     private static boolean pictureChosen = false;
+
     ImageView dogs;
     ImageView cats;
-    ImageView princess;
-    private ImageButton playMusicUnicornGalleryButton;
+    ImageView unicorn;
+    private ImageButton playMusicOtherGalleryButton;
 
     public static boolean isPictureChosen() {
         return pictureChosen;
@@ -34,23 +33,23 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unicorn_gallery);
+        setContentView(R.layout.activity_princess_gallery);
 
         dogs = (ImageButton) findViewById(R.id.dogs);
         cats = (ImageButton) findViewById(R.id.cats);
-        princess = (ImageButton) findViewById(R.id.princess);
+        unicorn = (ImageButton) findViewById(R.id.unicorn);
 
         dogs.setOnClickListener(this);
         cats.setOnClickListener(this);
-        princess.setOnClickListener(this);
+        unicorn.setOnClickListener(this);
 
-        playMusicUnicornGalleryButton = findViewById(R.id.playMusicUnicornGallery);
-        playMusicUnicornGalleryButton.setOnClickListener(this);
+        playMusicOtherGalleryButton = findViewById(R.id.playMusicOtherGallery);
+        playMusicOtherGalleryButton.setOnClickListener(this);
 
         for (int i = 1; i <= 12; i++) {
 
-            String overwrittenImageName = Save.getNameOfOverwrittenFile() + "uni" + i;
-            String orgImageName = "uni" + i;
+            String overwrittenImageName = Save.getNameOfOverwrittenFile() + "princess" + i;
+            String orgImageName = "princess" + i;
 
             Log.i("orgImageName", "orgImageName " + orgImageName);
             Log.i("overwrittenImageName", "overwrittenImageName " + overwrittenImageName);
@@ -65,7 +64,7 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
                 thumbPicture.setImageBitmap(BitmapFactory.decodeFile(Save.getFile_path() + "/" + overwrittenImageName + ".png"));
 //        }
 
-                Log.i("uniIdInt", "uniIdInt " + imageId);
+                Log.i("princessIdInt", "princessIdInt " + imageId);
             }
         }
 
@@ -76,56 +75,57 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
 
         switch (v.getId()) {
 
-            case R.id.cats:
-//                finish();
-                Intent intentApp = new Intent(UnicornGallery.this,
-                        CatGallery.class);
-//                finishAffinity();
-//                intentApp.addFlags(FLAG_ACTIVITY_SINGLE_TOP);
-                UnicornGallery.this.startActivity(intentApp);
-                MainActivity.setCurrentLayout(R.layout.activity_cat_gallery);
-                Log.v("TAG", "catsStart");
-                break;
-
-            case R.id.princess:
-//                finish();
-                intentApp = new Intent(UnicornGallery.this,
-                        PrincessGallery.class);
-//                finishAffinity();
-                intentApp.addFlags(FLAG_ACTIVITY_SINGLE_TOP);
-                UnicornGallery.this.startActivity(intentApp);
-                MainActivity.setCurrentLayout(R.layout.activity_princess_gallery);
-                Log.v("TAG", "princessStart");
-                break;
-
             case R.id.dogs:
 //                finish();
-                intentApp = new Intent(UnicornGallery.this,
+                Intent intentApp = new Intent(PrincessGallery.this,
                         DogGallery.class);
 //                finishAffinity();
                 intentApp.addFlags(FLAG_ACTIVITY_SINGLE_TOP);
-                UnicornGallery.this.startActivity(intentApp);
+                PrincessGallery.this.startActivity(intentApp);
                 MainActivity.setCurrentLayout(R.layout.activity_dog_gallery);
                 Log.v("TAG", "dogsStart");
                 break;
 
-            case R.id.playMusicUnicornGallery:
+            case R.id.cats:
+//                finish();
+                intentApp = new Intent(PrincessGallery.this,
+                        CatGallery.class);
+//                finishAffinity();
+//                intentApp.addFlags(FLAG_ACTIVITY_SINGLE_TOP);
+//                intentApp .setFlags(intentApp .getFlags() | Intent.FLAG_ACTIVITY_SINGLE_TOP |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                PrincessGallery.this.startActivity(intentApp);
+                MainActivity.setCurrentLayout(R.layout.activity_cat_gallery);
+                Log.v("TAG", "catsStart");
+                break;
+
+            case R.id.unicorn:
+//                finish();
+                intentApp = new Intent(PrincessGallery.this,
+                        UnicornGallery.class);
+//                finishAffinity();
+//                intentApp.addFlags(FLAG_ACTIVITY_SINGLE_TOP);
+//                intentApp .setFlags(intentApp .getFlags() | Intent.FLAG_ACTIVITY_SINGLE_TOP |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                PrincessGallery.this.startActivity(intentApp);
+                MainActivity.setCurrentLayout(R.layout.activity_unicorn_gallery);
+                Log.v("TAG", "unicornStart");
+                break;
+
+            case R.id.playMusicOtherGallery:
                 //check if music runs
                 AudioManager manager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
                 if (manager != null) {
                     if (manager.isMusicActive()) {
                         Log.d("Music", "stop.");
                         stopService(new Intent(this, MusicService.class));
-                        playMusicUnicornGalleryButton.setBackgroundResource(R.drawable.no_music);
+                        playMusicOtherGalleryButton.setBackgroundResource(R.drawable.no_music);
                     } else {
                         Log.d("Music", "started.");
                         startService(new Intent(this, MusicService.class));
-                        playMusicUnicornGalleryButton.setBackgroundResource(R.drawable.music);
+                        playMusicOtherGalleryButton.setBackgroundResource(R.drawable.music);
                     }
                 }
 
         }
-
 
     }
 
@@ -135,7 +135,7 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
         String buttonId = String.valueOf(x.getTag());
 //        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + Save.getNameOfFolder();
 
-        Intent mainActivity = new Intent(UnicornGallery.this, MainActivity.class);
+        Intent mainActivity = new Intent(PrincessGallery.this, MainActivity.class);
 //        jesli istnieje OverwrittenKidsPaint + buttonid wtedy putExtra("picture", "Overwritten" + buttoin
         File file = new File(Save.getFile_path(), Save.getNameOfOverwrittenFile() + buttonId + ".png");
 
@@ -147,28 +147,6 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
             Log.i("Found", "File not found : Overwritten" + buttonId);
         }
         startActivity(mainActivity);
-
-    }
-
-
-    public void gotoPaidApp(View v) {
-
-        pictureChosen = true;
-
-        Uri uri = Uri.parse("market://details?id=jetsetappfull.paint");
-        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-        // To count with Play market backstack, After pressing back button,
-        // to taken back to our application, we need to add following flags to intent.
-        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
-                Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
-                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        try {
-            startActivity(goToMarket);
-        } catch (ActivityNotFoundException e) {
-            startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://play.google.com/store/apps/details?id=jetsetappfull.paint")));
-
-        }
 
     }
 

@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;

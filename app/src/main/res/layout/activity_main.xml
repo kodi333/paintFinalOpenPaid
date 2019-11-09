@@ -11,10 +11,10 @@
     android:paddingRight="0dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:splitMotionEvents="false"
-    tools:context="jetsetapp.paint.MainActivity">
+    tools:context="jetsetappfull.paint.MainActivity">
 
 
-    <jetsetapp.paint.CanvasView
+    <jetsetappfull.paint.CanvasView
         android:id="@+id/canvas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package jetsetapp.paint;
+package jetsetappfull.paint;
 
 import android.app.Service;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import static jetsetapp.paint.MusicManager.lastSong;
+import static jetsetappfull.paint.MusicManager.lastSong;
 
 
 public class MusicService extends Service implements MediaPlayer.OnCompletionListener {
