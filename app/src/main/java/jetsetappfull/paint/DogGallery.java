@@ -39,6 +39,7 @@ public class DogGallery extends AppCompatActivity implements View.OnClickListene
         cats.setOnClickListener(this);
         unicorn.setOnClickListener(this);
 
+
         playMusicDogGalleryButton = findViewById(R.id.playMusicDogGallery);
         playMusicDogGalleryButton.setOnClickListener(this);
 

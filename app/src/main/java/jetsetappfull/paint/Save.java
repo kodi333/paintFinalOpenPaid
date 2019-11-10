@@ -21,11 +21,12 @@ public class Save {
     private static Context TheThis;
 
     private static String NameOfOverwrittenFile = "Overwritten";
-    private static String NameOfFolder = "/KidsPaint";
     private static String file_path;
 
     static {
-        file_path = "/data/user/0/jetsetapp.paint/app_imageDir";
+
+//        file_path = TheThis.getFilesDir() + "app_imageDir";
+        file_path = "/data/user/0/jetsetappfull.paint/app_imageDir";
     }
 
     static String getFile_path() {
@@ -59,6 +60,9 @@ public class Save {
 
     void SaveImage(Context context, Bitmap ImageToSave) {
         TheThis = context;
+
+//        Log.i("file_path","package " + TheThis.getPackageName());
+//        Log.i("file_path","file_path " + TheThis.getFilesDir() + "/" + TheThis.getPackageName());
 
         String currentDateAndTime = getCurrentDateAndTime();
 
