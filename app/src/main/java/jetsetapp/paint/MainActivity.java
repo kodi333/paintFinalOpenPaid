@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView rectangle;
     private ImageButton btn_unfocus;
     private GradientDrawable shapeDrawable;
-    //dropDown Spinner items
+    Spinner spinner;
     private ArrayList<SpinnerItem> spinnerBrushList;
 
     HashMap<Integer, Class> classMap = new HashMap<Integer, Class>();
@@ -203,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     setFocus(btn_unfocus, findViewById(v.getId()));
                     fillFloodSelected = true;
                     canvasView.changeStroke(0);
+                    spinner.setSelection(3); //set spinner to default
                     break;
                 case R.id.playMusic:
                     //check if music runs
@@ -320,6 +321,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     setFocus(btn_unfocus, findViewById(v.getId()));
                     fillFloodSelected = true;
                     canvasView.changeStroke(0);
+                    spinner.setSelection(3);
                     break;
 
                 case R.id.playMusic:
@@ -430,6 +432,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playMusicButton = findViewById(R.id.playMusic);
         playMusicButton.setOnClickListener(this);
 
+        spinner = findViewById(R.id.spinner_brushes);
+
         //get number of picture eg cat12 or overwrittencat12 to be used in setCanvasViewBackground or clear method
         Bundle extras = getIntent().getExtras();
 
@@ -452,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTransparentBackgroundToAllButtons();
 
         // Set transparent background for Spinner as well
-        Spinner spinner = findViewById(R.id.spinner_brushes);
+
         spinner.getBackground().setColorFilter(0x90ffffff, PorterDuff.Mode.MULTIPLY);
 
         //take the parameters - transparency etc from first button
