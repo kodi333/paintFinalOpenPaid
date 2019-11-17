@@ -1,19 +1,24 @@
 package jetsetapp.paint;
 
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.util.Objects;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -134,22 +139,62 @@ public class UnicornGallery extends AppCompatActivity implements View.OnClickLis
 
         pictureChosen = true;
 
-        Uri uri = Uri.parse("market://details?id=jetsetappfull.paint");
-        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-        // To count with Play market backstack, After pressing back button,
-        // to taken back to our application, we need to add following flags to intent.
-        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
-                Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
-                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        try {
-            startActivity(goToMarket);
-        } catch (ActivityNotFoundException e) {
-            startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://play.google.com/store/apps/details?id=jetsetappfull.paint")));
+        Dialog dialog = new Dialog(this, android.R.style.Theme_Dialog);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.prompt_buy_app);
+        dialog.setCanceledOnTouchOutside(true);
+        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        ImageButton ok_button2 = dialog.findViewById(R.id.buy_app_button);
+        ok_button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("market://details?id=jetsetappfull.paint");
+//                Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                // To count with Play market backstack, After pressing back button,
+                // to taken back to our application, we need to add following flags to intent.
+                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                        Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                try {
+                    startActivity(goToMarket);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("market://details?id=jetsetappfull.paint")));
+//                            Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+                }
+//                            ad2.dismiss();
+            }
 
-        }
+        });
+        ImageButton close_rate_button = dialog.findViewById(R.id.clear_buy_app_button);
+        close_rate_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
+//        Uri uri = Uri.parse("market://details?id=jetsetappfull.paint");
+//        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+//        // To count with Play market backstack, After pressing back button,
+//        // to taken back to our application, we need to add following flags to intent.
+//        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+//                Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+//                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+//        try {
+//            startActivity(goToMarket);
+//        } catch (ActivityNotFoundException e) {
+//            startActivity(new Intent(Intent.ACTION_VIEW,
+//                    Uri.parse("http://play.google.com/store/apps/details?id=jetsetappfull.paint")));
+//
+//        }
 
     }
+
+
 
     @Override
     public void onDestroy() {

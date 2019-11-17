@@ -11,6 +11,7 @@
     <string name="about_content"> Trala</string>
     <string name="play_music">Play music</string>
     <string name="unicorn_desc">unicorn image</string>
+    <string name="buy_app">Support us and buy \n <font color='#D4AF37'>GOLD app</font> \n with extra images!</string>
     <string-array name="brushes">
         <item>small brush</item>
         <item>medium brush</item>
